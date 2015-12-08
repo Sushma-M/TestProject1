@@ -15,7 +15,9 @@
 		"isList": false,
 		"owner": "App",
 		"dataSet": {
-			"en": "English"
+			"en": "English",
+			"te": "తెలుగు",
+			"hi": "हिंदी"
 		},
 		"dataBinding": [
 			{
@@ -115,5 +117,14 @@
 		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-goToPage_Page-wm.NavigationVariable-1449558327921"
+	},
+	"goToPage_appmssgespage": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "appmssgespage",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_appmssgespage-wm.NavigationVariable-1449558836567"
 	}
 }
