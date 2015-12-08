@@ -1,1 +1,28 @@
-{}
+{
+	"notificationVariable1": {
+		"owner": "Page",
+		"operation": "toast",
+		"dataBinding": {
+			"text": "Success",
+			"duration": "1000",
+			"class": "Success",
+			"toasterPosition": "bottom right"
+		},
+		"category": "wm.NotificationVariable",
+		"_id": "wm-notificationVariable1-wm.NotificationVariable-1449557887981",
+		"name": "notificationVariable1"
+	},
+	"notificationVariable2": {
+		"owner": "Page",
+		"operation": "toast",
+		"dataBinding": {
+			"text": "errorrr",
+			"duration": "1000",
+			"class": "Error",
+			"toasterPosition": "bottom right"
+		},
+		"category": "wm.NotificationVariable",
+		"_id": "wm-notificationVariable2-wm.NotificationVariable-1449557931473",
+		"name": "notificationVariable2"
+	}
+}

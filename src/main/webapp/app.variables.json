@@ -48,12 +48,12 @@
 				"fields": [
 					{
 						"name": "origin",
-						"value": "Toronto",
+						"value": "bind:Widgets.text1.datavalue",
 						"type": "string"
 					},
 					{
 						"name": "destination",
-						"value": "Montreal",
+						"value": "bind:Widgets.text2.datavalue",
 						"type": "string"
 					},
 					{
@@ -72,9 +72,11 @@
 		"operation": "invoke",
 		"operationType": "get",
 		"startUpdate": false,
-		"autoUpdate": true,
+		"autoUpdate": false,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
+		"onSuccess": "notificationVariable1",
+		"onError": "notificationVariable2",
 		"serviceType": "RestService",
 		"category": "wm.ServiceVariable",
 		"isDefault": true,

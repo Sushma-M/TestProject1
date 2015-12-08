@@ -25,26 +25,53 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
 
 </script>
 <script id="Main.variables.json">
-var _MainPage_Variables_ ={}
+var _MainPage_Variables_ ={
+	"notificationVariable1": {
+		"owner": "Page",
+		"operation": "toast",
+		"dataBinding": {
+			"text": "Success",
+			"duration": "1000",
+			"class": "Success",
+			"toasterPosition": "bottom right"
+		},
+		"category": "wm.NotificationVariable",
+		"_id": "wm-notificationVariable1-wm.NotificationVariable-1449557887981",
+		"name": "notificationVariable1"
+	},
+	"notificationVariable2": {
+		"owner": "Page",
+		"operation": "toast",
+		"dataBinding": {
+			"text": "errorrr",
+			"duration": "1000",
+			"class": "Error",
+			"toasterPosition": "bottom right"
+		},
+		"category": "wm.NotificationVariable",
+		"_id": "wm-notificationVariable2-wm.NotificationVariable-1449557931473",
+		"name": "notificationVariable2"
+	}
+}
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page name="page1" data-ng-controller="MainPageController" pagetitle="Main">
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-button class="btn-default" type="button" name="button1" caption="Button"></wm-button>
             <wm-composite name="composite1">
-                <wm-label class="col-md-3" name="label1"></wm-label>
+                <wm-label class="col-md-3" name="label1" caption="source"></wm-label>
                 <wm-container class="col-md-9" name="container1">
                     <wm-text name="text1"></wm-text>
                 </wm-container>
             </wm-composite>
             <wm-composite name="composite2">
-                <wm-label class="col-md-3" name="label2"></wm-label>
+                <wm-label class="col-md-3" name="label2" caption="destination"></wm-label>
                 <wm-container class="col-md-9" name="container2">
                     <wm-text name="text2"></wm-text>
                 </wm-container>
             </wm-composite>
-            <wm-button class="btn-default" type="button" name="button2" caption="Button"></wm-button>
+            <wm-button class="btn-default" type="button" name="button2" caption="Button" on-click="GoogleapisInvoke"></wm-button>
+            <wm-prefab prefabname="googlemaps" name="googlemaps1" locations="bind:Variables.GoogleapisInvoke.dataSet.route.leg.step" lat="start_location.lat" lng="end_location.lng" icon="polyline"></wm-prefab>
         </wm-page-content>
     </wm-content>
 </wm-page>
