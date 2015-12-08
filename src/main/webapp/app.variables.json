@@ -106,5 +106,14 @@
 			]
 		},
 		"_id": "wm-GoogleapisInvoke-wm.ServiceVariable-1449557685373"
+	},
+	"goToPage_Page": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Page",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Page-wm.NavigationVariable-1449558327921"
 	}
 }

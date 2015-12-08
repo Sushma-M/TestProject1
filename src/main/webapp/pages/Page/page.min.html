@@ -1,0 +1,55 @@
+<style id="Page.css">
+
+</style>
+<script id="Page.js">
+Application.$controller("PagePageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+</script>
+<script id="Page.variables.json">
+var _PagePage_Variables_ ={};
+</script>
+<script id="Page.html" type="text/ng-template">
+<wm-page name="page1" data-ng-controller="PagePageController" pagetitle="Page">
+    <wm-header name="header1" content="header"></wm-header>
+    <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel name="left_panel1" content="leftnav" columnwidth="2"></wm-left-panel>
+        <wm-page-content name="page_content1" columnwidth="10">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1">
+                    <wm-accordionheader name="accordionheader1" heading="youtube"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent1">
+                        <wm-prefab name="youtube1" prefabname="youtube"></wm-prefab>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane2">
+                    <wm-accordionheader name="accordionheader2" heading="FBPost"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent2">
+                        <wm-prefab name="fbpost2" height="536" prefabname="fbpost" appid="235401466622053"></wm-prefab>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="footer1" content="footer"></wm-footer>
+</wm-page>
+</script>

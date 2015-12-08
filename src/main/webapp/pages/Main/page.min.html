@@ -56,8 +56,11 @@ var _MainPage_Variables_ ={
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page name="page1" data-ng-controller="MainPageController" pagetitle="Main">
+    <wm-header name="header1" content="header"></wm-header>
+    <wm-top-nav name="top_nav1" content="topnav"></wm-top-nav>
     <wm-content name="content1">
-        <wm-page-content name="page_content1" columnwidth="12">
+        <wm-left-panel name="left_panel1" content="leftnav" columnwidth="2"></wm-left-panel>
+        <wm-page-content name="page_content1" columnwidth="10">
             <wm-composite name="composite1">
                 <wm-label class="col-md-3" name="label1" caption="source"></wm-label>
                 <wm-container class="col-md-9" name="container1">
@@ -71,8 +74,9 @@ var _MainPage_Variables_ ={
                 </wm-container>
             </wm-composite>
             <wm-button class="btn-default" type="button" name="button2" caption="Button" on-click="GoogleapisInvoke"></wm-button>
-            <wm-prefab prefabname="googlemaps" name="googlemaps1" locations="bind:Variables.GoogleapisInvoke.dataSet.route.leg.step" lat="start_location.lat" lng="end_location.lng" icon="polyline"></wm-prefab>
+            <wm-prefab name="googlemaps1" icon="polyline" lng="end_location.lng" lat="start_location.lat" locations="bind:Variables.GoogleapisInvoke.dataSet.route.leg.step" prefabname="googlemaps"></wm-prefab>
         </wm-page-content>
     </wm-content>
+    <wm-footer name="footer1" content="footer"></wm-footer>
 </wm-page>
 </script>
